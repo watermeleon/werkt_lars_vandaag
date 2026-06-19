@@ -253,6 +253,35 @@ def generate_html_content(schedule_by_date: Dict[str, List[Dict]], start_date: s
             color: var(--accent);
         }}
 
+        .upload-link {{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            max-width: 360px;
+            margin: 26px auto 6px;
+            padding: 15px 22px;
+            border: 1px solid var(--accent);
+            border-radius: 4px;
+            background: rgba(255,176,0,0.08);
+            color: var(--accent);
+            font-family: var(--mono);
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.2s;
+        }}
+        .upload-link:hover {{
+            background: var(--accent);
+            color: #0a0c0f;
+            box-shadow: 0 0 18px var(--accent-glow);
+        }}
+        .upload-link:active {{ transform: scale(0.98); }}
+        .upload-link .icon {{ font-size: 19px; line-height: 1; }}
+
         .days-container {{ padding: 16px; }}
         .day-card {{
             background: linear-gradient(135deg, #14171e 0%, #181b22 100%);
@@ -411,6 +440,11 @@ def generate_html_content(schedule_by_date: Dict[str, List[Dict]], start_date: s
         .theme-light .btn:hover {{ background: #5568d3; color: #fff; box-shadow: none; }}
         .theme-light .btn-now {{ background: #28a745; color: #fff; }}
         .theme-light .btn-now:hover {{ background: #218838; }}
+        .theme-light .upload-link {{
+            background: #667eea; border-color: #667eea; color: #fff;
+            border-radius: 6px; letter-spacing: normal;
+        }}
+        .theme-light .upload-link:hover {{ background: #5568d3; box-shadow: none; }}
         .theme-light .day-card {{
             background: #fff;
             border-left: 4px solid #667eea;
@@ -494,6 +528,9 @@ def generate_html_content(schedule_by_date: Dict[str, List[Dict]], start_date: s
         <div class="days-container" id="scheduleContainer">
             <!-- Schedule will be populated by JavaScript -->
         </div>
+        <a class="upload-link" href="https://raspberrypi.tail6c9a7c.ts.net" target="_blank" rel="noopener">
+            <span class="icon">📤</span> Upload new rooster PDF
+        </a>
         <div class="easter-egg" onclick="triggerGlitterBomb()">[ decrypt morale protocol ]</div>
     </div>
 
