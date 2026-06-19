@@ -1,5 +1,5 @@
 """
-Batch-process all of Agent L's roster PDFs into a single combined CSV.
+Batch-process all of Lars's roster PDFs into a single combined CSV.
 
 Each PDF is a BVCM period roster that already contains full ISO dates per row,
 so (unlike Sam's pipeline) there is no need to parse month/year/location from
@@ -53,7 +53,7 @@ def process_all_pdfs(source_path: str, dest_file: str) -> pd.DataFrame:
 def main():
     process_all_pdfs(
         source_path="./pdfs/",
-        dest_file="./extracted_schedules/L_schedule.csv",
+        dest_file="./extracted_schedules/lars_schedule.csv",
     )
 
 

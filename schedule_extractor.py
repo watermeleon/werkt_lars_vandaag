@@ -1,8 +1,8 @@
 """
-Schedule Extractor for Agent L
-==============================
+Schedule Extractor for Lars
+===========================
 
-Agent L's roster is a single-person, per-period report ("Concept Medewerker
+Lars's roster is a single-person, per-period report ("Concept Medewerker
 Rooster") produced by BVCM. Unlike Sam's monthly grid, this is a *vertical*
 list of days. Every row carries its own full date (DD/MM/YYYY) and zero or more
 shift entries.
@@ -50,7 +50,7 @@ TIME_RE = re.compile(r"(\d{2}:\d{2})-(\d{2}:\d{2})")
 
 
 class ScheduleExtractor:
-    """Extract Agent L's worked shifts from a BVCM period roster PDF."""
+    """Extract Lars's worked shifts from a BVCM period roster PDF."""
 
     def __init__(self, pdf_path: str):
         self.pdf_path = pdf_path

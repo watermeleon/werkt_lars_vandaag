@@ -1,5 +1,5 @@
 """
-Generate the interactive HTML viewer for Agent L's schedule.
+Generate the interactive HTML viewer for Lars's schedule.
 
 Reads the combined CSV produced by auto_process_all_pdfs.py and emits a
 self-contained HTML page (docs/index.html) with an embedded JSON blob of
@@ -62,7 +62,7 @@ def generate_html_content(schedule_by_date: Dict[str, List[Dict]], start_date: s
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Werkt Agent L Vandaag?</title>
+    <title>Werkt Lars Vandaag?</title>
     <style>
         * {{
             margin: 0;
@@ -476,7 +476,7 @@ def generate_html_content(schedule_by_date: Dict[str, List[Dict]], start_date: s
             <div class="eyebrow">// surveillance log · clearance: friend</div>
             <h1>
                 <span class="h-dim">WERKT</span>
-                <span class="h-agent">AGENT L</span><span class="cursor"></span>
+                <span class="h-agent">LARS</span><span class="cursor"></span>
                 <span class="h-dim">VANDAAG?</span>
             </h1>
             <div class="subhead">▌ DAILY DUTY STATUS ▐</div>
@@ -659,6 +659,6 @@ def generate_html_content(schedule_by_date: Dict[str, List[Dict]], start_date: s
 
 if __name__ == "__main__":
     generate_schedule_html(
-        csv_path="./extracted_schedules/L_schedule.csv",
+        csv_path="./extracted_schedules/lars_schedule.csv",
         output_file="./docs/index.html",
     )

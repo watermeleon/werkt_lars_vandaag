@@ -1,8 +1,8 @@
-# Werkt L Vandaag?
+# Werkt Lars Vandaag?
 
-A small site that shows Agent L's work schedule, generated from the period
-roster PDFs L receives. Same idea as the companion `werkt_sam_vandaag` repo, but
-L's roster has a completely different layout, so the extraction step is new.
+A small site that shows Lars's work schedule, generated from the period
+roster PDFs Lars receives. Same idea as the companion `werkt_sam_vandaag` repo, but
+Lars's roster has a completely different layout, so the extraction step is new.
 
 ## Steps
 
@@ -14,16 +14,16 @@ python auto_process_all_pdfs.py
 python schedule_html_generator.py
 ```
 
-## How L's roster differs from Sam's
+## How Lars's roster differs from Sam's
 
-| | Sam | Agent L |
+| | Sam | Lars |
 |---|---|---|
 | PDF layout | Monthly **grid**: employees × days, shift codes (N/D/A) | Per-period **list**: one block per day with full dates |
 | Shift value | Single letter code | Actual time ranges (`00:00-07:00`) |
-| People per PDF | Many (filter to Sam) | Just L |
+| People per PDF | Many (filter to Sam) | Just Lars |
 | Extraction | `cell_detector.py` recovers table geometry | Plain line/text parse — no geometry needed |
 
-Because L's PDF is a generated BVCM report ("Concept Medewerker Rooster") where
+Because Lars's PDF is a generated BVCM report ("Concept Medewerker Rooster") where
 every row carries its own date, extraction is just text parsing.
 
 ## Understanding the code
@@ -36,7 +36,7 @@ every row carries its own date, extraction is just text parsing.
   breaks.
 - `auto_process_all_pdfs.py` — runs the extractor over every PDF in `./pdfs/`,
   concatenates, de-duplicates overlapping periods, and writes
-  `extracted_schedules/L_schedule.csv`.
+  `extracted_schedules/lars_schedule.csv`.
 - `schedule_html_generator.py` — builds `docs/index.html`, a single-week viewer
   with previous/next navigation, current-day highlight, and light/dark themes.
 
